@@ -1,8 +1,6 @@
 package br.com.dio.desafio.dominio;
 
-import java.time.LocalDate;
-
-public class Curso {
+public class Curso extends Conteudo {
 	private String titulo;
 	private String descricao;
 	private int cargaHoraria;
@@ -10,6 +8,12 @@ public class Curso {
 	public Curso() {
 	}
 	
+	public Curso(String titulo, String descricao, String titulo2, String descricao2, int cargaHoraria) {
+		super(titulo, descricao);
+		titulo = titulo2;
+		descricao = descricao2;
+		this.cargaHoraria = cargaHoraria;
+	}
 	public String getTitulo() {
 		return titulo;
 	}
@@ -30,7 +34,12 @@ public class Curso {
 	}
 	@Override
 	public String toString() {
-		return "Curso [titulo=" + titulo + ", descricao=" + descricao + ", cargaHoraria=" + cargaHoraria + "]";
+		return "Curso [titulo=" + getTitulo() + ", descricao=" + getDescricao() + ", cargaHoraria=" + cargaHoraria + "]";
+	}
+
+	@Override
+	public double calcularXp() {
+		return XP_PADRAO * cargaHoraria;
 	}
 	
 	

@@ -1,7 +1,10 @@
 package br.com.dio.desafio;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import br.com.dio.desafio.dominio.Conteudo;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Mentoria;
 
